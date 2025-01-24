@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: storage
+  liquibase:
+    database-change-log-table: storage_database_changelog
+    database-change-log-lock-table: storage_database_changelog_lock
+  servlet:
+    multipart:
+      max-file-size: 100MB
+      max-request-size: 100MB

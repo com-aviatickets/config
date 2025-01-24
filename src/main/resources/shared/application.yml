@@ -1,0 +1,30 @@
+spring:
+  datasource:
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://postgres:5432/postgres
+  liquibase:
+    change-log: classpath:db/changelog/changelog-master.
+  mvc:
+    format:
+      date: iso
+      date-time: iso
+      time: iso
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://eureka:8761/eureka
+  instance:
+    preferIpAddress: true
+
+logging:
+  level:
+    org.hibernate.type: trace
+    org.springframework.boot.autoconfigure: error
+    root: debug
+    com.aviatickets: debug
+
+server:
+  port: 8080
